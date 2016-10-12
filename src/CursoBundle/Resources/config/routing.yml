@@ -1,0 +1,15 @@
+curso_homepage:
+    path:     /
+    defaults: { _controller: CursoBundle:Default:index }
+curso_ayuda:
+    path:     /ayuda/{tema}
+    defaults: { _controller: CursoBundle:Default:ayuda }
+curso_ayuda_twig:
+    path:     /ayuda2/{tema}
+    defaults: { _controller: CursoBundle:Default:ayuda2 }
+curso_info:
+    path:     /info/{nombre}/{apellidos}/{edad}
+    defaults: { _controller: CursoBundle:Info:index, nombre:Paco, apellidos:Gomez,edad:40 }
+empresa_crear:
+    path:     /empresa/crear
+    defaults: { _controller: CursoBundle:Empresa:crearEmpresa }
