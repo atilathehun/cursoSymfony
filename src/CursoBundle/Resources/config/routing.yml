@@ -10,6 +10,31 @@ curso_ayuda_twig:
 curso_info:
     path:     /info/{nombre}/{apellidos}/{edad}
     defaults: { _controller: CursoBundle:Info:index, nombre:Paco, apellidos:Gomez,edad:40 }
+curso_info_landing:
+    path:     /landingI/{id}
+    defaults: { _controller: CursoBundle:Info:landing}
+curso_info_landing_index:
+    path:     /landingI/
+    defaults: { _controller: CursoBundle:Info:index2}
 empresa_crear:
     path:     /empresa/crear
     defaults: { _controller: CursoBundle:Empresa:crearEmpresa }
+empresa_buscar:
+    path:     /empresa/{id}
+    defaults: { _controller: CursoBundle:Empresa:buscarEmpresa,id:1 }
+    methods:  [GET, HEAD]
+empresaPorNombre_buscar:
+    path:     /empresaPorNombre/{nombre}
+    defaults: { _controller: CursoBundle:Empresa:buscarEmpresaPorNombre,nombre:'Paco' }
+api_empresas:
+    path:     /api/empresas
+    defaults: { _controller: CursoBundle:Api:empresas}
+    methods:  [GET]
+api_empresa:
+    path:     /api/empresa/{nombre}
+    defaults: { _controller: CursoBundle:Api:empresa,nombre:'Sin definir'}
+    methods:  [GET]
+api_empresa_crear:
+    path:     /api/empresa
+    defaults: { _controller: CursoBundle:Api:crearEmpresa}
+    methods:  [POST]
